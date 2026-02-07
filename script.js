@@ -18,6 +18,35 @@ if (localData === null) {
   localStorage.setItem("Transactions", JSON.stringify([]));
 }
 
+// function to update the total stats of income, expense and balance after load, add and delete
+export const updateStatsSummery = () => {
+  let incomeOnCard = document.querySelector("#incomeState");
+  let expenseOnCard = document.querySelector("#expenseState");
+  let BalanceOnCard = document.querySelector("#balanceState");
+
+  let transactionList = JSON.parse(localStorage.getItem("Transactions"));
+  console.log(transactionList);
+
+  let totalIncome = transactionList
+    .filter((transaction) => transaction["Type"] === "Income")
+    .reduce((total, transaction) => total + transaction["Amount"], 0);
+
+  let totalExpense = transactionList
+    .filter((transaction) => transaction["Type"] === "Expense")
+    .reduce((total, transaction) => total + transaction["Amount"], 0);
+
+  let balance = totalIncome - totalExpense;
+
+  console.log(totalIncome);
+
+  incomeOnCard.textContent = `₹ ${totalIncome}`;
+  expenseOnCard.textContent = `₹ ${totalExpense}`;
+  BalanceOnCard.textContent = `₹ ${balance}`;
+};
+
+// invoking the updateStateSummary to display stats on page load
+updateStatsSummery();
+
 // function to display past transaction on page load
 const pageLoad = () => {
   let transactionArr = JSON.parse(localStorage.getItem("Transactions"));

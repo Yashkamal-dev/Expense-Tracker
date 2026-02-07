@@ -5,6 +5,9 @@
 // important module to render the task on adding a transaction
 import { renderTransaction } from "./transactions.js";
 
+// important module to update the total stats of income, expense and balance after adding a transaction
+import { updateStatsSummery } from "./script.js";
+
 // function for new transaction input
 export const addTransaction = () => {
   let typ = type.value;
@@ -47,4 +50,7 @@ export const addTransaction = () => {
   //   updating for the localStorage
   transactions.unshift(obj);
   localStorage.setItem("Transactions", JSON.stringify(transactions));
+
+  // updating the stats
+  updateStatsSummery();
 };

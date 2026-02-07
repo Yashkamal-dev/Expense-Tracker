@@ -2,6 +2,9 @@
 // which will br used on load and on add transactrion button.
 // and corresponding function to delete the transaction from ui and localstorage
 
+// important module to update the total stats of income, expense and balance after deleting a transaction
+import { updateStatsSummery } from "./script.js";
+
 const ul = document.querySelector("#lists");
 
 // function to render transaction
@@ -86,4 +89,7 @@ const deleteTransaction = (btn) => {
   );
 
   localStorage.setItem("Transactions", JSON.stringify(newLocalArr));
+
+  // updating the stats
+  updateStatsSummery();
 };
