@@ -39,8 +39,8 @@
               <div class="input-label-field-wrapper">
                 <label for="type">Type:</label>
                 <select name="type" id="type" class="input-feild dropDown">
+                  <option value="Expense" selected>Expense</option>
                   <option value="Income">Income</option>
-                  <option value="Expense">Expense</option>
                 </select>
               </div>
               <div class="input-label-field-wrapper">
@@ -48,19 +48,20 @@
                 <input
                   type="text"
                   name="amount"
-                  id="amount"
                   placeholder="Enter amount"
+                  value="23000"
+                  id="amount"
                   class="input-feild textBox"
                 />
               </div>
               <div class="input-label-field-wrapper">
                 <label for="category">Category:</label>
                 <select name="type" id="category" class="input-feild dropDown">
-                  <option value="" selected>Select Category</option>
-                  <option value="Food">food</option>
+                  <option value="-1" disabled>Select Category</option>
+                  <option value="Food">Food</option>
                   <option value="Transport">Transport</option>
                   <option value="Groceries">Groceries</option>
-                  <option value="Utilities">Utilities</option>
+                  <option value="Utilities" selected>Utilities</option>
                   <option value="Health">Health</option>
                   <option value="Education">Education</option>
                   <option value="Entertainment">Entertainment</option>
@@ -70,17 +71,18 @@
                 </select>
               </div>
               <div class="input-label-field-wrapper">
-                <label for="description">Description</label>
+                <label for="description">Description:</label>
                 <input
                   type="text"
                   name="description"
                   id="description"
+                  value="set example"
                   placeholder="Add a note (optional)"
                   class="input-feild textBox"
                 />
               </div>
               <div class="input-label-field-wrapper">
-                <label for="date">Date</label>
+                <label for="date">Date:</label>
                 <input
                   type="date"
                   name="date"
@@ -91,7 +93,7 @@
               </div>
             </div>
             <div class="add-btn-con">
-              <button class="addBtn">Add Transaction</button>
+              <button id="addBtn" class="addBtn">Add Transaction</button>
             </div>
           </main>
         </div>
@@ -106,65 +108,10 @@
 
         <!-- the list container -->
         <main class="list-container">
-          <ul class="lists">
-            <!-- <li class="transaction">hello</li> -->
-            <li class="transaction">
-              <span class="type income">Income</span>
-              <h4 class="name">Salary</h4>
-              <strong class="amount income">₹5600</strong>
-              <div class="date-dis-container">
-                <time class="date" datetime="2026-01-01">2026-01-01</time>
-                <i class="separator">•</i>
-                <small class="description">Pagaar</small>
-              </div>
-              <button class="dltBtn">
-                <img
-                  class="dltImg"
-                  src="assests/delete-icon.png"
-                  alt="delete image icon"
-                />
-              </button>
-            </li>
-
-            <li class="transaction">
-              <span class="type expense">Expense</span>
-              <h4 class="name">Utilities</h4>
-              <strong class="amount expense">- ₹500</strong>
-              <div class="date-dis-container">
-                <time class="date" datetime="2025-01-01">2025-12-12</time>
-                <i class="separator">•</i>
-                <small class="description">mobile recharge</small>
-              </div>
-              <button class="dltBtn">
-                <img
-                  class="dltImg"
-                  src="assests/delete-icon.png"
-                  alt="delete image icon"
-                />
-              </button>
-            </li>
-
-            <li class="transaction">
-              <span class="type income">Income</span>
-              <h4 class="name">salary</h4>
-              <strong class="amount">₹5600</strong>
-              <div class="date-dis-container">
-                <time class="date" datetime="2026-01-01">2026-01-01</time>
-                <i class="separator">•</i>
-                <small class="description">Pagaar</small>
-              </div>
-              <button class="dltBtn">
-                <img
-                  class="dltImg"
-                  src="assests/delete-icon.png"
-                  alt="delete image icon"
-                />
-              </button>
-            </li>
-          </ul>
+          <ul id="lists" class="lists"></ul>
         </main>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
