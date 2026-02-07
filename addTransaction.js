@@ -53,4 +53,10 @@ export const addTransaction = () => {
 
   // updating the stats
   updateStatsSummery();
+
+  type.value = "Expense";
+  amount.value = "";
+  category.value = "-1";
+  description.value = "";
+  date.value = new Date().toISOString().split("T")[0];
 };
