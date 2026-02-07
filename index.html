@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expense-tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- header - consist of heading and stats of user total expense and income -->
+      <header class="app-header">
+        <h1 id="appName" class="appName">Expense Tracker</h1>
+        <div class="stats-container">
+          <div class="income-container stat-card">
+            <label for="incomeState">Total Income</label>
+            <p id="incomeState" class="amount">₹47,000.00</p>
+          </div>
+          <div class="expense-container stat-card">
+            <label for="expenseState">Total Expenses</label>
+            <p id="expenseState" class="amount">₹23,000.00</p>
+          </div>
+          <div class="balance-container stat-card">
+            <label for="balanceState">Balance</label>
+            <p id="balanceState" class="amount">₹24,000.00</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- the transaction input -->
+      <div class="input-transactioBox-wrapper">
+        <div class="add-transaction">
+          <!-- the title of the new transaction input -->
+          <header class="transaction-header">Add New Transaction</header>
+
+          <!-- main input section -->
+          <main class="inputWrapper">
+            <div class="inputs">
+              <div class="input-label-field-wrapper">
+                <label for="type">Type:</label>
+                <select name="type" id="type" class="input-feild dropDown">
+                  <option value="Income">Income</option>
+                  <option value="Expense">Expense</option>
+                </select>
+              </div>
+              <div class="input-label-field-wrapper">
+                <label for="amount">Amounts:</label>
+                <input
+                  type="text"
+                  name="amount"
+                  id="amount"
+                  placeholder="Enter amount"
+                  class="input-feild textBox"
+                />
+              </div>
+              <div class="input-label-field-wrapper">
+                <label for="category">Category:</label>
+                <select name="type" id="category" class="input-feild dropDown">
+                  <option value="" selected>Select Category</option>
+                  <option value="Food">food</option>
+                  <option value="Transport">Transport</option>
+                  <option value="Groceries">Groceries</option>
+                  <option value="Utilities">Utilities</option>
+                  <option value="Health">Health</option>
+                  <option value="Education">Education</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Shopping">Shopping</option>
+                  <option value="Rent">Rent</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="input-label-field-wrapper">
+                <label for="description">Description</label>
+                <input
+                  type="text"
+                  name="description"
+                  id="description"
+                  placeholder="Add a note (optional)"
+                  class="input-feild textBox"
+                />
+              </div>
+              <div class="input-label-field-wrapper">
+                <label for="date">Date</label>
+                <input
+                  type="date"
+                  name="date"
+                  max="2026-02-07"
+                  id="date"
+                  class="input-feild dropDown"
+                />
+              </div>
+            </div>
+            <div class="add-btn-con">
+              <button class="addBtn">Add Transaction</button>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <!-- the transaction list container -->
+      <div class="transactionList-con">
+        <!-- the title of transaction list -->
+        <header class="transactionList-header">
+          <h1 class="list-title">Transaction List</h1>
+        </header>
+
+        <!-- the list container -->
+        <main class="list-container">
+          <ul class="lists">
+            <!-- <li class="transaction">hello</li> -->
+            <li class="transaction">
+              <span class="type income">Income</span>
+              <h4 class="name">Salary</h4>
+              <strong class="amount income">₹5600</strong>
+              <div class="date-dis-container">
+                <time class="date" datetime="2026-01-01">2026-01-01</time>
+                <i class="separator">•</i>
+                <small class="description">Pagaar</small>
+              </div>
+              <button class="dltBtn">
+                <img
+                  class="dltImg"
+                  src="assests/delete-icon.png"
+                  alt="delete image icon"
+                />
+              </button>
+            </li>
+
+            <li class="transaction">
+              <span class="type expense">Expense</span>
+              <h4 class="name">Utilities</h4>
+              <strong class="amount expense">- ₹500</strong>
+              <div class="date-dis-container">
+                <time class="date" datetime="2025-01-01">2025-12-12</time>
+                <i class="separator">•</i>
+                <small class="description">mobile recharge</small>
+              </div>
+              <button class="dltBtn">
+                <img
+                  class="dltImg"
+                  src="assests/delete-icon.png"
+                  alt="delete image icon"
+                />
+              </button>
+            </li>
+
+            <li class="transaction">
+              <span class="type income">Income</span>
+              <h4 class="name">salary</h4>
+              <strong class="amount">₹5600</strong>
+              <div class="date-dis-container">
+                <time class="date" datetime="2026-01-01">2026-01-01</time>
+                <i class="separator">•</i>
+                <small class="description">Pagaar</small>
+              </div>
+              <button class="dltBtn">
+                <img
+                  class="dltImg"
+                  src="assests/delete-icon.png"
+                  alt="delete image icon"
+                />
+              </button>
+            </li>
+          </ul>
+        </main>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 1.5em;
+  background-color: rgba(244, 244, 248);
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  padding-bottom: 1.2em;
+  margin-bottom: 1.2em;
+  border-bottom: 1px solid rgb(194, 194, 194);
+
+  /* background-color: #693f3f; */
+}
+
+.appName {
+  font-size: 2.9rem;
+  font-weight: 750;
+  letter-spacing: 1px;
+
+  padding-top: 1rem;
+
+  align-self: center;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 130px;
+
+  justify-content: center;
+  gap: 10px;
+}
+
+.stat-card {
+  /* flex-grow: 1; */
+  padding: 0 20px;
+
+  background-color: antiquewhite;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.income-container {
+  color: white;
+  background-color: rgba(27, 156, 116);
+}
+
+.expense-container {
+  color: white;
+  background-color: rgba(229, 81, 87);
+}
+
+.balance-container {
+  color: black;
+  background-color: rgba(203, 207, 215);
+}
+
+.stat-card .amount {
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+.stat-card label {
+  font-size: 1.1rem;
+}
+
+/* add input area styling */
+
+.input-transactioBox-wrapper {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+
+  border-bottom: 1px solid rgb(185, 191, 202);
+}
+
+.add-transaction {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 12px;
+  border: 1px solid rgb(185, 191, 202);
+}
+
+.transaction-header {
+  height: 15%;
+  font-size: 1.6rem;
+  font-weight: 560;
+
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: 1px solid rgb(185, 191, 202);
+
+  background-color: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  padding: 20px 2rem;
+}
+
+.inputWrapper {
+  padding: 2rem;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.532);
+
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.input-label-field-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.input-label-field-wrapper label {
+  font-size: 1.1rem;
+  color: #3a3a3a;
+}
+
+.input-label-field-wrapper .input-feild {
+  height: 2.7rem;
+  font-size: 1.1rem;
+
+  border: 1px solid rgb(185, 191, 202);
+  border-radius: 8px;
+}
+
+.dropDown {
+  width: 30%;
+  min-width: 230px;
+  max-width: 350px;
+  padding-left: 10px;
+
+  /* cursor: pointer; */
+}
+
+.dropDown:focus {
+  outline: 1px solid rgb(185, 191, 202);
+}
+
+.textBox {
+  padding-left: 10px;
+}
+
+.textBox:focus {
+  outline: 1px solid rgb(185, 191, 202);
+}
+
+.add-btn-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 0;
+  border-top: 1px solid rgb(185, 191, 202);
+}
+
+.add-btn-con .addBtn {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding: 13px 50px;
+
+  color: white;
+  background-color: rgba(37, 118, 229);
+
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.add-btn-con .addBtn:active {
+  box-shadow: 1px 1px 10px rgb(185, 191, 202);
+}
+
+/* the transaction list */
+
+.list-title {
+  font-size: 1.6rem;
+  padding: 1rem 1rem;
+}
+
+.list-container {
+  border-radius: 12px;
+  border: 1px solid rgb(185, 191, 202);
+}
+
+.lists {
+  list-style: none;
+}
+
+.lists .transaction {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+
+  color: rgba(35, 44, 54);
+  font-size: 1.1rem;
+
+  padding: 1em 1.2em;
+  grid-template-columns: 2.5fr 6fr 4fr 7.5fr 1fr;
+  border-bottom: 1px solid rgba(185, 191, 202, 0.57);
+}
+
+.lists .transaction .type {
+  width: 80px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: white;
+
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.lists .transaction .type.income {
+  background-color: rgba(24, 154, 116);
+}
+.lists .transaction .type.expense {
+  background-color: rgba(229, 78, 84);
+}
+
+.lists .transaction .name {
+  justify-self: start;
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+
+.lists .transaction .amount.expense {
+  color: rgba(229, 78, 84);
+}
+
+.date-dis-container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.lists .transaction .date {
+  color: inherit;
+  color: rgba(52, 74, 107);
+}
+
+.separator {
+  display: none;
+}
+
+.lists .transaction .dltBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.lists .transaction .dltBtn .dltImg {
+  height: 30px;
+  opacity: 0.7;
+}
