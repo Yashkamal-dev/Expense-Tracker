@@ -50,6 +50,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.491);
 }
 
 .income-container {
@@ -138,6 +140,8 @@ body {
 
   border: 1px solid rgb(185, 191, 202);
   border-radius: 8px;
+
+  box-shadow: 0px 1px rgba(0, 0, 0, 0.491);
 }
 
 .dropDown {
@@ -225,6 +229,8 @@ body {
 
   padding: 7px;
   border-radius: 5px;
+
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.491);
 }
 
 .lists .transaction .type.income {
