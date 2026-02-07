@@ -14,15 +14,15 @@
         <div class="stats-container">
           <div class="income-container stat-card">
             <label for="incomeState">Total Income</label>
-            <p id="incomeState" class="amount">₹47,000.00</p>
+            <p id="incomeState" class="amount"></p>
           </div>
           <div class="expense-container stat-card">
             <label for="expenseState">Total Expenses</label>
-            <p id="expenseState" class="amount">₹23,000.00</p>
+            <p id="expenseState" class="amount"></p>
           </div>
           <div class="balance-container stat-card">
             <label for="balanceState">Balance</label>
-            <p id="balanceState" class="amount">₹24,000.00</p>
+            <p id="balanceState" class="amount"></p>
           </div>
         </div>
       </header>
@@ -49,7 +49,6 @@
                   type="text"
                   name="amount"
                   placeholder="Enter amount"
-                  value="23000"
                   id="amount"
                   class="input-feild textBox"
                 />
@@ -57,11 +56,11 @@
               <div class="input-label-field-wrapper">
                 <label for="category">Category:</label>
                 <select name="type" id="category" class="input-feild dropDown">
-                  <option value="-1" disabled>Select Category</option>
+                  <option value="-1" disabled selected>Select Category</option>
                   <option value="Food">Food</option>
                   <option value="Transport">Transport</option>
                   <option value="Groceries">Groceries</option>
-                  <option value="Utilities" selected>Utilities</option>
+                  <option value="Utilities">Utilities</option>
                   <option value="Health">Health</option>
                   <option value="Education">Education</option>
                   <option value="Entertainment">Entertainment</option>
@@ -76,7 +75,6 @@
                   type="text"
                   name="description"
                   id="description"
-                  value="set example"
                   placeholder="Add a note (optional)"
                   class="input-feild textBox"
                 />
@@ -86,7 +84,6 @@
                 <input
                   type="date"
                   name="date"
-                  max="2026-02-07"
                   id="date"
                   class="input-feild dropDown"
                 />
