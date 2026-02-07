@@ -30,10 +30,10 @@ export const renderTransaction = (obj) => {
   amount.className = "amount";
   if (obj["Type"] === "Expense") {
     amount.classList.add("expense");
-    amount.textContent = `- ${obj["Amount"]}`;
+    amount.textContent = `- ₹ ${obj["Amount"]}`;
   } else if (obj["Type"] === "Income") {
     amount.classList.add("income");
-    amount.textContent = obj["Amount"];
+    amount.textContent = `₹ ${obj["Amount"]}`;
   }
 
   let dateDisCon = document.createElement("div");
