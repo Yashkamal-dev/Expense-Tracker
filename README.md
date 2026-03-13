@@ -24,7 +24,7 @@ The app uses **localStorage** to persist data, so transactions remain saved even
 
 ### 🖥️ Desktop View
 
-<img src="assets/ExpenseTrackerScreenshot.jpeg" alt="Expense-Tracker Screenshot" width="390">
+<img src="assets/ExpenseTrackerScreenshot.jpeg" alt="Expense-Tracker Screenshot">
 
 ---
 
