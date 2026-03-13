@@ -20,6 +20,14 @@ The app uses **localStorage** to persist data, so transactions remain saved even
 
 ---
 
+## 📸 Preview
+
+### 🖥️ Desktop View
+
+<img src="assets/ExpenseTrackerScreenshot.jpeg" alt="Expense-Tracker Screenshot" width="390">
+
+---
+
 ## 🛠️ Tech Stack
 
 - **HTML5** – Structure
@@ -28,12 +36,6 @@ The app uses **localStorage** to persist data, so transactions remain saved even
 - **localStorage API** – Data persistence
 
 ---
-
-## 📸 Screenshots
-
-### 🖥️ Desktop View
-
-<img src="assets/ExpenseTrackerScreenshot.jpeg" alt="Expense-Tracker Screenshot" width="390">
 
 ## 📂 Project Structure
 
@@ -48,6 +50,8 @@ The app uses **localStorage** to persist data, so transactions remain saved even
 ├── transactions.js      # Render & delete transactions
 └── README.md
 ```
+
+---
 
 ## 👤 Author
 
